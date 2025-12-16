@@ -7,11 +7,8 @@ from .models import Question
 def index(request):
     # Get all the Questions from the databases
     questions = Question.objects.order_by('-pub_date')
-    result = ' , '.join([q.question_text for q in questions])
-    context = {
-        'result': result,
-    }
-    return render(request, 'index.html', context)
+
+    return render(request, 'index.html', { 'questions': questions })
 
 def detail(request, question_id):
     # try:

@@ -1,4 +1,4 @@
-!<!DOCTYPE html>
+<!DOCTYPE html>
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,7 +11,7 @@
         {% if questions %}
         <ul>
         {% for q in questions %}
-        <li> <h3> <an href="/polls/{{ q.id }}"> {{ q.question_text }} </a></h3> </li>
+        <li> <h3> <a href=""> {{ q.question_text }} </a></h3> </li>
         {% endfor %}
         </ul>
         {% else %}
