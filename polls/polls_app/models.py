@@ -12,3 +12,4 @@ class Choice(models.Model):
     question = models.ForeignKey(Question, on_delete=models.CASCADE)
     votes = models.IntegerField('Number of votes', default=0)
     choice_text = models.CharField(max_length=200)
+    update_at = models.DateTimeField('Date updated')
